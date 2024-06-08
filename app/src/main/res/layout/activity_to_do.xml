@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="#7260A4F1">
+
+    <!-- TextView on top of the to-do page -->
+    <TextView
+        android:id="@+id/intro_to_do"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="staatliches"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:padding="16dp"
+        android:text="To-Do List"
+        android:textColor="#0A3C6F"
+        android:textSize="33sp"
+        android:textStyle="bold" />
+
+
+    <!-- ImageButton to take back to the Home Page -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="50dp"
+        android:layout_alignParentBottom="true">
+
+
+        <ImageButton
+            android:id="@+id/backButtonToDo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_add_home"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="16dp"
+            android:contentDescription="Back Button"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/toDoRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addToDoButton"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+    <!-- Floating Action Button to add a to-do-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addToDoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="#72FFFFFF"
+        android:outlineSpotShadowColor="#7260A4F1"
+        android:paddingLeft="16dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/ic_add_button"
+        app:rippleColor="#7260A4F1"
+        />
+
+
+
+</RelativeLayout>

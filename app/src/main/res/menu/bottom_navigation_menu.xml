@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/classesItem"
+        android:title="Classes"
+        android:icon="@drawable/ic_add_class" />
+    <item
+        android:id="@+id/assignmentsItem"
+        android:title="Assignments"
+        android:icon="@drawable/ic_add_assignment"
+        />
+    <item
+        android:id="@+id/examsItem"
+        android:title="Exams"
+        android:icon="@drawable/ic_add_exam" />
+    <item
+        android:id="@+id/toDoItem"
+        android:title="ToDoList"
+        android:icon="@drawable/ic_add_todo"
+        />
+</menu>

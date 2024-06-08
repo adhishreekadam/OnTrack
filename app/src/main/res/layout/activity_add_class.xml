@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#7260A4F1">
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/staatliches"
+        android:text="Add a New Class"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/classNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="16dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/classNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D0D6E8"
+            android:background="@color/black"
+            android:hint="Class Name"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/classTimeDayLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classNameLayout"
+        android:layout_marginTop="8dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/classTimeDayEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Class Time and Day"
+            android:backgroundTint="#D0D6E8"
+            android:background="@color/black"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/classInstructorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classTimeDayLayout"
+        android:layout_marginTop="8dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/classInstructorEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Class Instructor"
+            android:backgroundTint="#D0D6E8"
+            android:background="@color/black"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/saveClassButton"
+        android:layout_width="301dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/classInstructorLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="128dp"
+        android:text="Save"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
+
+

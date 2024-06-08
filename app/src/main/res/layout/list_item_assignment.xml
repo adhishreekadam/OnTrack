@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/item_border"
+    android:layout_marginBottom="4dp"
+    android:backgroundTint="#72FFFFFF">
+
+    <TextView
+        android:id="@+id/assignmentNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assignment Name"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/assignmentClassTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/assignmentNameTextView"
+        android:layout_marginTop="4dp"
+        android:text="Class"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/assignmentDueDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/assignmentClassTextView"
+        android:layout_marginTop="4dp"
+        android:text="Due Date"
+        android:textSize="17sp"/>
+
+    <ImageButton
+        android:id="@+id/btnEditAssignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:layout_alignParentEnd="true"
+        android:background="#00FFFFFF"
+        android:layout_marginStart="8dp"
+        android:onClick="onAddClick"/>
+
+    <ImageButton
+        android:id="@+id/btnDeleteAssignment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:background="#00FFFFFF"
+        android:layout_toStartOf="@id/btnEditAssignment"
+        android:onClick="onDeleteClick"/>
+</RelativeLayout>

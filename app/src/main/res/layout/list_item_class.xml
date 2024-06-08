@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/item_border"
+    android:layout_marginBottom="4dp"
+    android:backgroundTint="#72FFFFFF">
+
+    <TextView
+        android:id="@+id/classNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_name"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/classTimeDayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classNameTextView"
+        android:layout_marginTop="4dp"
+        android:text="@string/time_and_day"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/classInstructorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classTimeDayTextView"
+        android:layout_marginTop="4dp"
+        android:text="@string/instructor_name"
+        android:textSize="17sp"/>
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:layout_alignParentEnd="true"
+        android:background="#00FFFFFF"
+        android:layout_marginStart="8dp"
+        android:onClick="onAddClick"/>
+
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:layout_toStartOf="@id/btnAdd"
+        android:background="#00FFFFFF"
+        android:onClick="onDeleteClick"/>
+
+</RelativeLayout>

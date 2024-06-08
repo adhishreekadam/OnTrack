@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#7260A4F1"
+    android:layout_height="match_parent"
+    tools:context=".ClassesActivity">
+
+    <!-- ImageButton to take back to the Home Page -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="50dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/backButtonClass"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_add_home"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="16dp"
+            android:contentDescription="Back Button" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView on top of the class page -->
+    <TextView
+        android:id="@+id/intro_classes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="staatliches"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:layout_alignParentLeft="true"
+        android:text="Classes"
+        android:textColor="#0A3C6F"
+        android:textSize="33sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/classesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addClassButton"
+        android:padding="16dp" />
+
+    <!-- Floating Action Button to add a class -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addClassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="26dp"
+        android:backgroundTint="#72FFFFFF"
+        android:outlineSpotShadowColor="#7260A4F1"
+        android:paddingLeft="16dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/ic_add_button"
+        app:rippleColor="#7260A4F1"
+        tools:visibility="visible" />
+
+    <!-- ImageButton to filter classes, positioned right below the add button -->
+    <ImageButton
+        android:id="@+id/btnFilterClass"
+        android:layout_width="57dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/addClassButton"
+        android:layout_alignEnd="@id/addClassButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="-3dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="Filter Button"
+        android:padding="40dp"
+        android:src="@drawable/ic_filter2" />
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/item_border"
+    android:layout_marginBottom="4dp"
+    android:backgroundTint="#72FFFFFF">
+
+    <TextView
+        android:id="@+id/examNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exam Name"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/examClassTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examNameTextView"
+        android:layout_marginTop="4dp"
+        android:text="Class"
+        android:textSize="17sp"/>
+
+    <TextView
+        android:id="@+id/examDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examClassTextView"
+        android:layout_marginTop="4dp"
+        android:text="Date and Time"
+        android:textSize="17sp"/>
+
+    <ImageButton
+        android:id="@+id/btnEditExam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_edit"
+        android:background="#00FFFFFF"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="8dp"
+        android:onClick="onAddClick"/>
+
+    <ImageButton
+        android:id="@+id/btnDeleteExam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/btnEditExam"
+        android:onClick="onDeleteClick"
+        android:background="#00FFFFFF"
+        android:src="@drawable/ic_delete" />
+
+</RelativeLayout>

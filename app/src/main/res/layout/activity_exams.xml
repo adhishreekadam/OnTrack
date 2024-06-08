@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7260A4F1"
+    tools:context=".ExamsActivity">
+
+    <!-- TextView on top of the exam page -->
+    <TextView
+        android:id="@+id/intro_exams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/kufam_semibold"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:layout_alignParentLeft="true"
+        android:text="Exams"
+        android:textColor="#0A3C6F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+    />
+
+    <!-- ImageButton to take back to the Home Page -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="50dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#72FFFFFF">
+
+
+        <ImageButton
+            android:id="@+id/backButtonExams"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:backgroundTint="#72FFFFFF"
+            android:contentDescription="Back Button"
+            android:padding="16dp"
+            android:src="@drawable/ic_add_home" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- RecyclerView -->
+
+    <!-- Floating Action Button to add an exam -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/examsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/fabAddExam"
+        android:layout_marginTop="-10dp"
+        android:padding="16dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddExam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="26dp"
+        android:outlineSpotShadowColor="#7260A4F1"
+        android:paddingLeft="16dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/ic_add_button"
+        app:rippleColor="#7260A4F1"
+        tools:visibility="visible" />
+</RelativeLayout>

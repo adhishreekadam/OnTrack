@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7260A4F1"
+    android:gravity="center">
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/OnTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="staatliches"
+            android:text="@string/ontrack"
+            android:textColor="#0A3C6F"
+            android:textSize="100sp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/OnTrack"
+            android:layout_gravity="center"
+            android:textColor="#0A3C6F"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:layout_marginTop="95dp"
+            android:text="Empowering Students, One Schedule at a Time" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:id="@+id/imageView"
+            app:srcCompat="@drawable/ic_add_logo"
+            android:layout_marginBottom="150dp"
+            />
+    </FrameLayout>
+
+    <!-- BottomNavigationView -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#75B5E6"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

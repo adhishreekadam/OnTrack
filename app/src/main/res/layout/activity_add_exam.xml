@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#7260A4F1"
+    tools:context=".AddExamActivity">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/staatliches"
+        android:shadowColor="#ffffff"
+        android:text="Add a New Exam"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="34sp"
+
+        android:typeface="normal" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/examNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="16dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/examNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D0D6E8"
+            android:hint="Exam Name"
+            android:background="@color/black"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/examDateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:layout_below="@id/examNameLayout"
+        android:layout_marginTop="16dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/examDateTimeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D0D6E8"
+            android:background="@color/black"
+            android:clickable="true"
+            android:hint="Exam Date and Time" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ExamLocationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/examDateLayout"
+        android:elevation="8dp"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/classEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D0D6E8"
+            android:background="@color/black"
+            android:hint="Exam Location" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/saveExamButton"
+        android:layout_width="301dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/ExamLocationLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="128dp"
+        android:text="Save"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

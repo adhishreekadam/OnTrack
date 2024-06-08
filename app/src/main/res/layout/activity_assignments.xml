@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7260A4F1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AssignmentsActivity">
+
+    <!-- Circular ImageButton to take back to the Home Page -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="35dp"> <!-- Set to half of the width/height -->
+
+        <ImageButton
+            android:id="@+id/backButtonAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_add_home"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="16dp"
+            android:contentDescription="Back Button"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView on top of the page -->
+    <TextView
+        android:id="@+id/intro_assignments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="staatliches"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:layout_alignParentLeft="true"
+        android:text="Assignments"
+        android:textColor="#0A3C6F"
+        android:textSize="33sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/assignmentsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/addAssignmentsButton"
+        android:padding="16dp" />
+
+    <!-- Floating Action Button to add an assignment -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addAssignmentsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="26dp"
+        android:outlineSpotShadowColor="#7260A4F1"
+        android:paddingLeft="16dp"
+        android:backgroundTint="#72FFFFFF"
+        android:paddingBottom="16dp"
+        android:src="@drawable/ic_add_button"
+        android:contentDescription="add_assignments_button"
+        app:rippleColor="#7260A4F1"
+        tools:visibility="visible"/>
+
+    <!-- ImageButton to filter assignments, positioned right below the add button -->
+    <ImageButton
+        android:id="@+id/btnFilterAssignments"
+        android:layout_width="46dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/addAssignmentsButton"
+        android:layout_alignEnd="@id/addAssignmentsButton"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="Filter Button"
+        android:padding="40dp"
+        android:src="@drawable/ic_filter2" />
+
+</RelativeLayout>
